@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=https://www.roblox.com/headshot-thumbnail/image?userId=REPLACE_ID&width=150&height=150&format=png" />
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      if (id) {
+        window.location.href = `https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=150&height=150&format=png`;
+      } else {
+        document.write("No se proporcionó ningún ID.");
+      }
+    </script>
   </head>
   <body>
-    Redirigiendo...
   </body>
 </html>
