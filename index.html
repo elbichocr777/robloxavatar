@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Redirigiendo al avatar...</title>
+  <title>Redirigiendo a Render...</title>
   <script>
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
     if (id && !isNaN(id)) {
-      window.location.href = `https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=150&height=150&format=png`;
+      // Redirige al servidor de Render (tu intermediario)
+      window.location.href = `https://avatarorblox.onrender.com/avatar/${id}`;
     } else {
-      document.write("⚠️ Falta el parámetro ?id=...");
+      document.write("⚠️ Falta el parámetro ?id=");
     }
   </script>
 </head>
